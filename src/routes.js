@@ -8,6 +8,7 @@ import AboutPage from './components/about/AboutPage';
 import CoursesPage from './components/course/CoursesPage';
 import ManageCoursePage from './components/course/ManageCoursePage'; //eslint-disable-line import/no-named-as-default
 import WizardFormPage from './components/form_wizard/WizardFormPage'; //eslint-disable-line import/no-named-as-default
+import InitialAssessmentPage from './components/initial_assesment/InitialAssessmentPage'; //eslint-disable-line import/no-named-as-default
 
 const RoutingConfig = () => (
   <div>
@@ -17,6 +18,7 @@ const RoutingConfig = () => (
     <Route exact path="/course" component={ManageCoursePage}/>
     <Route exact path="/wizard-form" component={WizardFormPage}/>
     <Route path="/about" component={AboutPage}/>
+    <Route path="/initial_assesment" component={InitialAssessmentPage}/>
   </div>
 );
 

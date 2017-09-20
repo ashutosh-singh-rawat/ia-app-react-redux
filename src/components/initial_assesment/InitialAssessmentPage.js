@@ -2,19 +2,17 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { Values } from "redux-form-website-template";
-// import store from "./store";
 import showResults from "../../custom_utils/showResults";
-import WizardForm from "./WizardForm";
+import InitialAssessmentForm from "./InitialAssessmentForm";
 
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as courseActions from '../../actions/courseActions';
 import toastr from 'toastr';
 import { Link, withRouter } from 'react-router-dom';
 
 
-class WizardFormPage extends React.Component {
+class InitialAssessmentPage extends React.Component {
   constructor(props, context){
     super(props, context);
     this.state = {
@@ -27,9 +25,9 @@ class WizardFormPage extends React.Component {
   render() {
     return (
       <div style={{ padding: 15 }}>
-        <h2>Wizard Example</h2>
-        <WizardForm onSubmit={showResults} />
-        <Values form="wizard" />
+        <h2>Initial Assessment Form</h2>
+        <InitialAssessmentForm onSubmit={showResults} />
+        <Values form="i_a_form" />
       </div>
     );
   }
@@ -40,8 +38,8 @@ function mapStateToProps(state, ownProps) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return {actions: bindActionCreators(courseActions, dispatch)};
+  return {};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(WizardFormPage);
-// export default WizardFormPage;
+export default connect(mapStateToProps, mapDispatchToProps)(InitialAssessmentPage);
+// export default InitialAssessmentPage;
