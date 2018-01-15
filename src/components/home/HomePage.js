@@ -5,10 +5,11 @@ class HomePage extends React.Component {
   render() {
     return (
       <div className="jumbotron">
-        <h1>React Administration</h1>
-        <p> TEst asdas asdasdas sa d asd as d as d as d asd as d as d as</p>
-        <Link to="about" className="btn btn-primary btn-lg"> Learn more </Link>
+        <h1>Initial Assessment</h1>
+
+        <Link to="initial_assesment" className="btn btn-primary btn-lg"> Start </Link>
       </div>
+      // <p> TEst asdas asdasdas sa d asd as d as d as d asd as d as d as</p>
     );
   }
 }
